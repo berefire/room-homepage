@@ -1,0 +1,12 @@
+@use "@styles/abstracts/functions" as *;
+
+@mixin focus-ring(
+    $color: currentColor,
+    $width: rem(2),
+    $offset: rem(3)
+) {
+    &:focus-visible {
+        outline: $width solid $color;
+        outline-offset: $offset;
+    }
+}

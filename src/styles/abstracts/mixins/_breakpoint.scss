@@ -1,0 +1,28 @@
+@use "sass:map";
+@use "@styles/tokens/primitives" as primitives;
+
+@mixin mq($breakpoint) {
+    $size: map.get(primitives.$breakpoints, $breakpoint);
+
+    @if $size == null {
+        @error "Breakpoint '#{$breakpoint}' does not exist.";
+    }
+
+    @media (min-width: $size){
+        @content;
+    }
+}
+
+@mixin mq-down($breakpoint) {
+    $size: map.get(primitives.$breakpoints, $breakpoint);
+
+    @if $size == null {
+        @error "Breakpoint '#{$breakpoint}' does not exist.";
+    }
+
+    $max-size: calc(#{$size} - 0.01px);
+
+    @media (max-width: $max-size){
+        @content;
+    }
+}

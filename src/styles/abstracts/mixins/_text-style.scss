@@ -1,0 +1,13 @@
+@use "sass:map";
+
+@mixin text-style($style) {
+    @if $style == null {
+        @error "Text style '#{$style}' does not exist.";
+    }
+
+    font-family: map.get($style, family);
+    font-size: map.get($style, size);
+    font-weight: map.get($style, weight);
+    line-height: map.get($style, line-height);
+    letter-spacing: map.get($style, letter-spacing);
+}

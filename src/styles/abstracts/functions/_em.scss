@@ -1,0 +1,10 @@
+@use "sass:math";
+@use "@styles/abstracts/settings" as settings;
+
+@function em($px) {
+    @if math.is-unitless($px) {
+        $px: $px * 1px;
+    }
+
+    @return math.div($px, settings.$root-font-size) * 1em;
+}
