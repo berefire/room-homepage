@@ -9,15 +9,8 @@
   <!-- Primary metadata -->
   <title>Berefire | Frontend Mentor Room Homepage</title>
 
-  <meta
-    name="description"
-    content="A responsive Room homepage featuring an interactive hero slider, mobile navigation, and modern frontend practices built with HTML, Sass, and JavaScript."
-  />
-
-  <meta
-    name="keywords"
-    content="Room Homepage, Frontend Mentor, HTML, Sass, JavaScript, Responsive Design, Furniture Website"
-  />
+  <meta name="description"
+    content="A responsive Room homepage featuring an interactive hero slider, mobile navigation, and modern frontend practices built with HTML, Sass, and JavaScript." />
 
   <meta name="author" content="Berefire" />
   <meta name="robots" content="index, follow" />
@@ -31,79 +24,110 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Berefire | Frontend Mentor Room Homepage" />
 
-  <meta
-    property="og:title"
-    content="Berefire | Frontend Mentor Room Homepage"
-  />
+  <meta property="og:title" content="Berefire | Frontend Mentor Room Homepage" />
 
-  <meta
-    property="og:description"
-    content="A responsive Room homepage featuring an interactive hero slider, mobile navigation, and modern frontend practices built with HTML, Sass, and JavaScript."
-  />
+  <meta property="og:description"
+    content="A responsive Room homepage featuring an interactive hero slider, mobile navigation, and modern frontend practices built with HTML, Sass, and JavaScript." />
 
   <meta property="og:url" content="https://tu-dominio.com/" />
 
-  <meta
-    property="og:image"
-    content="https://tu-dominio.com/images/preview.jpg"
-  />
+  <meta property="og:image" content="https://tu-dominio.com/images/preview.jpg" />
 
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <meta
-    property="og:image:alt"
-    content="Preview of the Room homepage website"
-  />
+  <meta property="og:image:alt" content="Preview of the Room homepage website" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
 
-  <meta
-    name="twitter:title"
-    content="Berefire | Frontend Mentor Room Homepage"
-  />
+  <meta name="twitter:title" content="Berefire | Frontend Mentor Room Homepage" />
 
-  <meta
-    name="twitter:description"
-    content="A responsive Room homepage featuring an interactive hero slider built with HTML, Sass, and JavaScript."
-  />
+  <meta name="twitter:description"
+    content="A responsive Room homepage featuring an interactive hero slider built with HTML, Sass, and JavaScript." />
 
-  <meta
-    name="twitter:image"
-    content="https://tu-dominio.com/images/preview.jpg"
-  />
+  <meta name="twitter:image" content="https://tu-dominio.com/images/preview.jpg" />
 
-  <meta
-    name="twitter:image:alt"
-    content="Preview of the Room homepage website"
-  />
+  <meta name="twitter:image:alt" content="Preview of the Room homepage website" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
   <script src="./src/js/main.js" defer type="module"></script>
 </head>
 
 <body>
-  Home
-  Shop
-  About
-  Contact
-
-  Discover innovative ways to decorate
-
-  We provide unmatched quality, comfort, and style for property owners across the country.
-  Our experts combine form and function in bringing your vision to life. Create a room in your
-  own style with our collection and make your property a reflection of you and what you love.
-
-  Shop now
-
-  About our furniture
-
-  Our multifunctional collection blends design and function to suit your individual taste.
-  Make each room unique, or pick a cohesive theme that best express your interests and what
-  inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-  or anything in between. Product specialists are available to help you create your dream space.
-
+  <header class="site-header">
+    <button type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open mobile menu">
+      <svg aria-hidden="true" focusable="false" width="20" height="14" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 14">
+        <path d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z" fill="#FFF" fill-rule="evenodd" />
+      </svg>
+    </button>
+    <a href="#" class="site-header__logo" aria-label="Room home">
+      <img src="./assets/icons/logo.svg" alt="" />
+    </a>
+    <nav aria-label="Desktop navigation" class="site-nav site-nav--desktop">
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a href="#" class="site-nav__link">Home</a></li>
+        <li class="site-nav__item"><a href="#" class="site-nav__link">Shop</a></li>
+        <li class="site-nav__item"><a href="#" class="site-nav__link">About</a></li>
+        <li class="site-nav__item"><a href="#" class="site-nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <picture data-slide-media>
+          <source data-slide-source srcset="./assets/images/desktop/desktop-image-hero-1.jpg" media="(min-width: 1024px)" />
+          <img data-slide-image src="./assets/images/mobile/mobile-image-hero-1.jpg" alt="Modern living room with white furniture"
+            class="hero__image" />
+        </picture>
+      </div>
+      <div class="hero__content" aria-livel="polite">
+        <h1 id="hero-title" data-slide-title class="hero__title">Discover innovative ways to decorate</h1>
+        <p class="hero__description" data-slide-description>We provide unmatched quality, comfort, and style for property owners across the
+          country. Our experts combine form and function in bringing your vision to life. Create a room in your own
+          style with our collection and make your property a reflection of you and what you love.</p>
+        <a href="#" class="hero__link">Shop now
+          <span aria-hidden="true">
+            <svg aria-hidden="true" focusable="false" width="40" height="12" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 40 12">
+              <path
+                d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                fill="#000" fill-rule="nonzero" />
+            </svg>
+          </span>
+        </a>
+      </div>
+      <nav class="hero__controls" aria-label="Hero slider controls">
+        <button data-action="previous" type="button" aria-label="Previous slide" class="hero__control hero__control--prev">
+          <svg aria-hidden="true" focusable="false" width="14" height="24" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 14 24">
+            <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd" />
+          </svg>
+        </button>
+        <button data-action="next" type="button" aria-label="Next slide" class="hero__control hero__control--next">
+          <svg aria-hidden="true" focusable="false" width="14" height="24" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 14 24">
+            <path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd" />
+          </svg>
+        </button>
+      </nav>
+    </section>
+    <section class="about" aria-labelledby="about-title">
+      <img class="about__image" src="/assets/images/common/image-about-dark.jpg"
+        alt="Dark themed living room with modern furniture" />
+      <div class="about__content">
+        <h2 class="about__title" id="about-title">About our furniture</h2>
+        <p class="about__description">Our multifunctional collection blends design and function to suit your individual
+          taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you.
+          Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product
+          specialists are available to help you create your dream space.</p>
+      </div>
+      <img class="about__image" src="/assets/images/common/image-about-light.jpg"
+        alt="Light themed living room with modern furniture" />
+    </section>
+  </main>
   <footer class="attribution">
     Challenge by <a class="link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
       rel="noopener noreferrer" aria-label="Frontend Mentor (opens in a new tab)">Frontend Mentor <span
