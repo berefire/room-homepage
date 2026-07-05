@@ -15,6 +15,8 @@ $font-size-500: rem(40);
 $font-size-600: rem(48);
 
 // Line heights
+$line-height-tight: 0.90;
+$line-height-snug: 0.63;
 $line-height-none: 1;
 $line-height-relaxed: 1.4;
 
@@ -24,4 +26,5 @@ $letter-spacing-tight: em(-0.7);
 $letter-spacing-snug: em(-0.5);
 $letter-spacing-normal: 0;
 $letter-spacing-wide: em(7);
-$letter-spacing-extra-wide: em(12.5);
+$letter-spacing-extra-wide: em(5.83);
+$letter-spacing-ultra-wide: em(12.5);
