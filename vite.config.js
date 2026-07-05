@@ -9,5 +9,13 @@ export default defineConfig({
       "@assets": resolve(__dirname, "src/assets"),
       "@js": resolve(__dirname, "src/js")
     }
-  }
+  },
+
+   css: {
+    preprocessorOptions: {
+      scss: {
+        loadPaths: [resolve(__dirname, "src/styles")],
+      },
+    },
+  },
 });
