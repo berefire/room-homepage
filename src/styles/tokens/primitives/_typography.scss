@@ -1,0 +1,27 @@
+@use "abstracts/functions" as *;
+
+// Font Families
+$font-family-primary: "League Spartan", sans-serif;
+
+// Font weights
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+// Font sizes
+$font-size-150: rem(15);
+$font-size-200: rem(16);
+$font-size-500: rem(40);
+$font-size-600: rem(48);
+
+// Line heights
+$line-height-none: 1;
+$line-height-relaxed: 1.4;
+
+//Letter spacing
+$letter-spacing-extra-tight: em(-2);
+$letter-spacing-tight: em(-0.7);
+$letter-spacing-snug: em(-0.5);
+$letter-spacing-normal: 0;
+$letter-spacing-wide: em(7);
+$letter-spacing-extra-wide: em(12.5);

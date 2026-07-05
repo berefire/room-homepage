@@ -1,0 +1,19 @@
+@use "abstracts/functions" as *;
+
+$space-0: 0;
+$space-200: rem(16);
+$space-300: rem(24);
+$space-400: rem(32);
+$space-600: rem(48);
+$space-700: rem(56);
+$space-800: rem(64);
+
+$spaces: (
+  "space-0": $space-0,
+  "space-200": $space-200,
+  "space-300": $space-300,
+  "space-400": $space-400,
+  "space-600": $space-600,
+  "space-700": $space-700,
+  "space-800": $space-800
+);
