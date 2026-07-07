@@ -1,0 +1,44 @@
+@use "tokens/primitives" as primitives;
+
+$typography: (
+    "font-body": primitives.$font-family-primary,
+    "font-heading": primitives.$font-family-primary,
+
+    "font-weight-medium": primitives.$font-weight-medium,
+    "font-weight-semi-bold": primitives.$font-weight-semi-bold,
+    "font-weight-bold": primitives.$font-weight-bold,
+);
+
+// Text styles
+$text-hero: (
+    "family": var(--font-heading),
+    "size": var(--text-hero-size),
+    "line-height": var(--text-hero-line-height),
+    "letter-spacing": primitives.$letter-spacing-extra-tight,
+    "weight": primitives.$font-weight-semi-bold
+
+);
+
+$text-heading: (
+    "family": var(--font-heading),
+    "size": var(--text-heading-size),
+    "line-height": var(--text-heading-line-height),
+    "letter-spacing": var(--text-heading-letter-spacing),
+    "weight": primitives.$font-weight-bold
+);
+
+$text-button: (
+    "family": var(--font-body),
+    "size": primitives.$font-size-150,
+    "line-height": primitives.$line-height-none,
+    "letter-spacing": primitives.$letter-spacing-extra-wide,
+    "weight": primitives.$font-weight-medium
+);
+
+$text-body: (
+    "family": var(--font-body),
+    "size": primitives.$font-size-200,
+    "line-height": primitives.$line-height-relaxed,
+    "letter-spacing": primitives.$letter-spacing-snug,
+    "weight": primitives.$font-weight-medium
+);
