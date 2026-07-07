@@ -84,7 +84,6 @@
   }
 
   &__link {
-    inline-size: max-content;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -96,6 +95,7 @@
     @include mixins.focus-ring;
 
     @include mixins.mq("md") {
+      inline-size: max-content;
       justify-content: flex-start;
       gap: var(--space-300);
     }
@@ -104,8 +104,6 @@
       gap: var(--space-400);
     }
   }
-
-
 
   @include mixins.mq("md") {
     &__image {
