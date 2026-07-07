@@ -6,8 +6,14 @@
 
 :root {
 
+    // Primitive CSS Variables
+    @include mixins.css-vars(primitives.$spaces);
+    @include mixins.css-vars(primitives.$primitive-colors);
+
     // Semantic CSS Variables
     @include mixins.css-vars(semantics.$typography);
+    @include mixins.css-vars(semantics.$spacing);
+    @include mixins.css-vars(semantics.$semantic-colors);
 
     // Responsive typography CSS variables
     --text-hero-size: primitives.$font-size-500;

@@ -42,3 +42,11 @@ $text-body: (
     "letter-spacing": primitives.$letter-spacing-snug,
     "weight": primitives.$font-weight-medium
 );
+
+$text-menu-nav: (
+    "family": var(--font-body),
+    "size": primitives.$font-size-200,
+    "line-height": primitives.$line-height-none,
+    "letter-spacing": primitives.$letter-spacing-tight,
+    "weight": primitives.$font-weight-semi-bold
+);
