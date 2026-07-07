@@ -1,5 +1,6 @@
 @use "abstracts/mixins" as mixins;
 @use "abstracts/functions" as functions;
+@use "tokens/semantics" as semantics;
 
 .hero {
   display: grid;
@@ -40,6 +41,71 @@
       block-size: #{functions.rem(16.8)};
     }
   }
+
+  &__content {
+    --box-padding-inline: var(--space-400);
+    --box-padding-block: var(--space-800);
+    --stack-space: var(--space-400);
+
+    @include mixins.mq("md") {
+      --box-padding-inline: var(--space-800);
+      --stack-space: var(--space-300);
+    }
+
+    @include mixins.mq("lg") {
+      --box-padding-inline: var(--space-400);
+      --stack-space: var(--space-200);
+
+      transform: translateY(-10%);
+    }
+
+    @include mixins.mq("xl") {
+      --box-padding-inline: #{functions.rem(100)};
+      --stack-space: var(--space-400);
+
+      transform: translateY(0%);
+    }
+  }
+
+  &__text {
+    --stack-space: var(--space-200);
+  }
+
+  &__main-title {
+    color: var(--black);
+
+    @include mixins.text-style(semantics.$text-hero);
+  }
+
+  &__description {
+    color: var(--color-fc-hero-description);
+
+    @include mixins.text-style(semantics.$text-body);
+  }
+
+  &__link {
+    inline-size: max-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: var(--black);
+
+    @include mixins.text-style(semantics.$text-button);
+
+    @include mixins.focus-ring;
+
+    @include mixins.mq("md") {
+      justify-content: flex-start;
+      gap: var(--space-300);
+    }
+
+    @include mixins.mq("lg") {
+      gap: var(--space-400);
+    }
+  }
+
+
 
   @include mixins.mq("md") {
     &__image {

@@ -30,6 +30,7 @@
         .site-nav__link {
             position: relative;
             color: var(--color-fc-nav-desktop);
+            text-transform: lowercase;
 
             @include mixins.focus-ring;
 
