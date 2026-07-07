@@ -1,0 +1,59 @@
+@use "abstracts/mixins" as mixins;
+@use "abstracts/functions" as functions;
+@use "tokens/semantics" as semantics;
+
+.site-nav {
+    &--desktop {
+        display: none;
+
+        @include mixins.mq("lg") {
+            display: block;
+        }
+    }
+
+    &--mobile {
+        display: block;
+    }
+}
+
+.site-nav--desktop {
+    @include mixins.mq("lg") {
+        .site-nav__list {
+            display: flex;
+            padding-block: functions.rem(10);
+            gap: var(--space-400);
+            color: var(--color-fc-nav-desktop);
+
+            @include mixins.text-style(semantics.$text-menu-nav);  
+        }
+
+        .site-nav__link {
+            position: relative;
+            color: var(--color-fc-nav-desktop);
+
+            @include mixins.focus-ring;
+
+            &::after {
+                content: "";
+
+                position: absolute;
+
+                inset-block-end: functions.rem(-8);
+                inset-inline: 50% auto;
+
+                inline-size: 0;
+                block-size: functions.rem(2);
+
+                background-color: currentColor;
+
+                transform: translateX(-50%);
+                transition: inline-size 200ms ease;
+            }
+
+            &:hover::after,
+            &:focus-visible::after {
+                inline-size: functions.rem(24);
+            }
+        }
+    }
+}
