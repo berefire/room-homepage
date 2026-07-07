@@ -1,5 +1,16 @@
-    .attribution {
-        font-size: clamp(0.6875em, 1vw, 0.8125em);
-        text-align: center;
-        color: black;
+@use "abstracts/mixins" as mixins;
+
+.attribution {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: clamp(0.6875em, 1vw, 0.8125em);
+  text-align: center;
+  color: black;
+  background-color: var(--color-bg-primary);
+  inline-size: 100%;
+
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);  
 }
