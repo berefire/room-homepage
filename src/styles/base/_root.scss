@@ -11,22 +11,23 @@
     @include mixins.css-vars(primitives.$primitive-colors);
 
     // Semantic CSS Variables
-    @include mixins.css-vars(semantics.$typography);
     @include mixins.css-vars(semantics.$spacing);
     @include mixins.css-vars(semantics.$semantic-colors);
+    @include mixins.css-vars(semantics.$typography);
 
     // Responsive typography CSS variables
-    --text-hero-size: primitives.$font-size-500;
-    --text-hero-line-height: primitives.$line-height-none;
-    --text-heading-size: primitives.$font-size-100;
-    --text-heading-line-height: primitives.$line-height-snug;
-    --text-heading-letter-spacing: primitives.$letter-spacing-extra-wide;
+    --text-hero-size: #{primitives.$font-size-500};
+    --text-hero-line-height: #{primitives.$line-height-none};
+    --text-heading-size: #{primitives.$font-size-100};
+    --text-heading-line-height: #{primitives.$line-height-snug};
+    --text-heading-letter-spacing: #{primitives.$letter-spacing-extra-wide};
 
+    
     @include mixins.mq(md){
-        --text-hero-size: primitives.$font-size-600;
-        --text-hero-line-height: primitives.$line-height-tight;
-        --text-heading-size: primitives.$font-size-200;
-        --text-heading-line-height: primitives.$line-height-relaxed;
-        --text-heading-letter-spacing: primitives.$letter-spacing-wide;
+        --text-hero-size: #{primitives.$font-size-600};
+        --text-hero-line-height: #{primitives.$line-height-tight};
+        --text-heading-size: #{primitives.$font-size-200};
+        --text-heading-line-height: #{primitives.$line-height-relaxed};
+        --text-heading-letter-spacing: #{primitives.$letter-spacing-wide};
     }
 }
