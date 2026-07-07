@@ -57,34 +57,49 @@
 <body>
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <header class="site-header">
-        <button type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open mobile menu">
-          <svg aria-hidden="true" focusable="false" width="20" height="14" xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 14">
-            <path d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z" fill="#FFF" fill-rule="evenodd" />
-          </svg>
-        </button>
-        <a href="#" class="site-header__logo" aria-label="Room home">
-          <img src="./assets/icons/logo.svg" alt="" />
-        </a>
-        <nav aria-label="Desktop navigation" class="site-nav site-nav--desktop">
-          <ul class="site-nav__list">
-            <li class="site-nav__item"><a href="#" class="site-nav__link">Home</a></li>
-            <li class="site-nav__item"><a href="#" class="site-nav__link">Shop</a></li>
-            <li class="site-nav__item"><a href="#" class="site-nav__link">About</a></li>
-            <li class="site-nav__item"><a href="#" class="site-nav__link">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
       <div class="hero__media">
+        <header class="site-header box">
+          <button class="site-header__button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open mobile menu">
+            <svg aria-hidden="true" focusable="false" width="20" height="14" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 14">
+              <path d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z" fill="currentColor" fill-rule="evenodd" />
+            </svg>
+          </button>
+          <a href="#" class="site-header__logo" aria-label="Room home">
+            <img src="./assets/icons/logo.svg" alt="" />
+          </a>
+          <nav aria-label="Desktop navigation" class="site-nav site-nav--desktop">
+            <ul class="site-nav__list">
+              <li class="site-nav__item"><a href="#" class="site-nav__link">Home</a></li>
+              <li class="site-nav__item"><a href="#" class="site-nav__link">Shop</a></li>
+              <li class="site-nav__item"><a href="#" class="site-nav__link">About</a></li>
+              <li class="site-nav__item"><a href="#" class="site-nav__link">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
         <picture data-slide-media>
           <source data-slide-source srcset="./assets/images/desktop/desktop-image-hero-1.jpg"
-            media="(min-width: 1024px)" />
+            media="(min-width: 768px)" />
           <img data-slide-image src="./assets/images/mobile/mobile-image-hero-1.jpg"
             alt="Modern living room with white furniture" class="hero__image" />
         </picture>
+        <nav class="hero__controls" aria-label="Hero slider controls">
+          <button data-action="previous" type="button" aria-label="Previous slide"
+            class="hero__control hero__control--prev box">
+            <svg class="hero__control-icon" aria-hidden="true" focusable="false" width="14" height="24" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 14 24">
+              <path d="M13 0L1 12l12 12" stroke="currentColor" fill="none" fill-rule="evenodd" />
+            </svg>
+          </button>
+          <button data-action="next" type="button" aria-label="Next slide" class="hero__control hero__control--next box">
+            <svg class="hero__control-icon" aria-hidden="true" focusable="false" width="14" height="24" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 14 24">
+              <path d="M1 0l12 12L1 24" stroke="currentColor" fill="none" fill-rule="evenodd" />
+            </svg>
+          </button>
+        </nav>
       </div>
-      <div class="hero__content" aria-live="polite">
+      <div class="hero__content box" aria-live="polite">
         <h1 id="hero-title" data-slide-title class="hero__title">Discover innovative ways to decorate</h1>
         <p class="hero__description" data-slide-description>We provide unmatched quality, comfort, and style for
           property owners across the
@@ -96,26 +111,11 @@
               viewBox="0 0 40 12">
               <path
                 d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
-                fill="#000" fill-rule="nonzero" />
+                fill="currentColor" fill-rule="nonzero" />
             </svg>
           </span>
         </a>
       </div>
-      <nav class="hero__controls" aria-label="Hero slider controls">
-        <button data-action="previous" type="button" aria-label="Previous slide"
-          class="hero__control hero__control--prev">
-          <svg aria-hidden="true" focusable="false" width="14" height="24" xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 14 24">
-            <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd" />
-          </svg>
-        </button>
-        <button data-action="next" type="button" aria-label="Next slide" class="hero__control hero__control--next">
-          <svg aria-hidden="true" focusable="false" width="14" height="24" xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 14 24">
-            <path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd" />
-          </svg>
-        </button>
-      </nav>
     </section>
     <section class="about" aria-labelledby="about-title">
       <img class="about__image" src="/assets/images/common/image-about-dark.jpg"
