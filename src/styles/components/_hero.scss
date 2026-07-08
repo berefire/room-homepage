@@ -3,6 +3,8 @@
 @use "tokens/semantics" as semantics;
 
 .hero {
+  grid-area: hero;
+
   display: grid;
   grid-template-columns: 1fr;
 
@@ -15,14 +17,16 @@
     position: relative;
   }
 
-  &__image, &__main-title, &__description {
+  &__image,
+  &__main-title,
+  &__description {
     transition:
-      opacity .3s ease,
-      transform .3s ease;
+      opacity 0.3s ease,
+      transform 0.3s ease;
 
-      @include mixins.reduced-motion {
-        transition: none;
-      }
+    @include mixins.reduced-motion {
+      transition: none;
+    }
   }
 
   &__controls {
@@ -67,17 +71,8 @@
     }
 
     @include mixins.mq("lg") {
-      --box-padding-inline: var(--space-400);
-      --stack-space: var(--space-200);
-
-      transform: translateY(-10%);
-    }
-
-    @include mixins.mq("xl") {
-      --box-padding-inline: #{functions.rem(100)};
+      --box-padding-inline: clamp(var(--space-400), 5vw, #{functions.rem(72)});
       --stack-space: var(--space-400);
-
-      transform: translateY(0%);
     }
   }
 
@@ -113,10 +108,6 @@
       justify-content: flex-start;
       gap: var(--space-300);
     }
-
-    @include mixins.mq("lg") {
-      gap: var(--space-400);
-    }
   }
 
   @include mixins.mq("md") {
@@ -136,10 +127,24 @@
   }
 
   @include mixins.mq("lg") {
-    grid-template-columns: 58% 42%;
+    --column: calc(100% / 14);
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(14, minmax(0, 1fr));
+
+    align-items: stretch;
 
     &__media {
-      grid-column: 1;
+      grid-column: 1 / span 8;
+      position: relative;
+    }
+
+    &__content {
+      grid-column: 9 / span 6;
+
+      display: grid;
+      align-content: center;
     }
 
     &__image {
@@ -148,19 +153,14 @@
       object-fit: cover;
     }
 
-    &__content {
-      grid-column: 2;
-
-      display: grid;
-      align-content: center;
-    }
-
     &__controls {
       position: absolute;
-      z-index: 1;
-
       inset-block-end: 0;
-      right: functions.rem(-160);
+      translate: calc(var(--column) * 14) 0;
+    }
+
+    &__control {
+      --box-padding-inline: #{functions.rem(45)};
     }
   }
 }
@@ -212,5 +212,5 @@
 
 .is-changing {
   opacity: 0;
-  transform: scale(.985);
+  transform: scale(0.985);
 }

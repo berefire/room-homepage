@@ -3,55 +3,64 @@
 @use "tokens/semantics" as semantics;
 
 .about {
-    position: relative;
+  position: relative;
+  grid-area: about;
 
+  display: grid;
+  grid-template-columns: 1fr;
+
+  &__image {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    --box-padding-block: var(--space-600);
+    --box-padding-inline: var(--space-400);
+    --stack-space: var(--space-200);
+
+    @include mixins.mq("md") {
+      --box-padding-block: var(--space-800);
+      --box-padding-inline: var(--space-800);
+    }
+
+    @include mixins.mq("lg") {
+      --box-padding-block: #{functions.rem(59)};
+      --box-padding-inline: #{functions.rem(48)};
+
+      position: relative;
+      justify-content: center;
+    }
+  }
+
+  &__main-title {
+    color: var(--black);
+    text-transform: uppercase;
+
+    @include mixins.text-style(semantics.$text-heading);
+  }
+
+  &__description {
+    color: var(--color-fc-about-description);
+
+    @include mixins.text-style(semantics.$text-body);
+  }
+
+  @include mixins.mq("lg") {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(14, minmax(0, 1fr));
 
-    &__image {
-        inline-size: 100%;
-        block-size: 100%;
-        object-fit: cover;
+    &__image:first-of-type {
+      grid-column: 1 / span 5;
     }
 
     &__content {
-        --box-padding-block: var(--space-600);
-        --box-padding-inline: var(--space-400);
-        --stack-space: var(--space-200);
-
-        @include mixins.mq("md") {
-            --box-padding-block: var(--space-800);
-            --box-padding-inline: var(--space-800);
-        }
-
-        @include mixins.mq("lg") {
-            --box-padding-block: #{functions.rem(59)};
-            --box-padding-inline: #{functions.rem(48)};
-
-            position: relative;
-        }
+      grid-column: 6 / span 5;
     }
 
-    &__main-title {
-        color: var(--black);
-        text-transform: uppercase;
-
-        @include mixins.text-style(semantics.$text-heading);
+    &__image:last-of-type {
+      grid-column: 11 / span 4;
     }
-
-    &__description {
-        color: var(--color-fc-about-description);
-
-        @include mixins.text-style(semantics.$text-body);
-    }
-
-
-
-    @include mixins.mq("lg") {
-        grid-template-columns: 29% 40% 31%;
-
-        position: static;
-    }   
-
-
+  }
 }
