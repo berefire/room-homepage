@@ -1,0 +1,16 @@
+@use "abstracts/mixins" as mixins;
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero"
+        "about";
+
+    @include mixins.mq("lg") {
+        grid-template-columns: repeat(14, minmax(0, 1fr));
+        grid-template-areas:
+            "hero hero hero hero hero hero hero hero hero hero hero hero hero hero"
+            "about about about about about about about about about about about about about about";
+    }
+}
