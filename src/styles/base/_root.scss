@@ -23,7 +23,7 @@
     --text-heading-letter-spacing: #{primitives.$letter-spacing-extra-wide};
 
     
-    @include mixins.mq(md){
+    @include mixins.mq("md"){
         --text-hero-size: #{primitives.$font-size-600};
         --text-hero-line-height: #{primitives.$line-height-tight};
         --text-heading-size: #{primitives.$font-size-200};
