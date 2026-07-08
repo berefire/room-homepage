@@ -74,7 +74,7 @@ Users should be able to:
 
 ### 🔗Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/room-homepage-responsive-layout-sass-and-accessible-slider-pzoklJEXTo](https://www.frontendmentor.io/solutions/room-homepage-responsive-layout-sass-and-accessible-slider-pzoklJEXTo)
 - Live Site URL: [https://berefire.github.io/room-homepage/](https://berefire.github.io/room-homepage/)
 
 ---
