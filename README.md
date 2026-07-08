@@ -52,6 +52,26 @@ Users should be able to:
 
 ### 📸Screenshot
 
+#### Mobile (375x914)
+
+| _Main_ | _Menu_ | _Menu Active_ |
+| ------ | ------ | ------------- |
+| ![Mobile](./docs/screenshots/mobile.png) | ![Mobile Menu](./docs/screenshots/mobile-menu.png) | ![Mobile Menu Active](./docs/screenshots/mobile-menu-active.png) |  
+
+#### Tablet (768x914)
+
+| _Main_ | _Menu_ | _Menu Active_ |
+| ------ | ------ | ------------- |
+| ![Tablet](./docs/screenshots/tablet.png) | ![Tablet Menu](./docs/screenshots/tablet-menu.png) | ![Tablet Menu Active](./docs/screenshots/tablet-menu-active.png) |  
+
+#### Desktop (1440x914)
+
+| _Main_ | _Active_ |
+| ------ | -------- |
+| ![Desktop](./docs/screenshots/desktop.png) | ![Desktop Active](./docs/screenshots/desktop-active.png) |
+
+---
+
 ### 🔗Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
