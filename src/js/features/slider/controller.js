@@ -8,7 +8,7 @@ export function createSliderController({
   descriptionElement,
 }) {
   let currentIndex = 0;
-  const animatedElements = [imageElement, titleElement, descriptionElement];
+  let isAnimating = false;
 
   function render() {
     const slide = SLIDES[currentIndex];
@@ -21,23 +21,33 @@ export function createSliderController({
     descriptionElement.textContent = slide.description;
   }
 
-  function animateSlide(callback) {
+  function animateSlide(update) {
+    if (isAnimating) return;
+
+    const elements = [imageElement, titleElement, descriptionElement];
+
     if (prefersReducedMotion()) {
-      callback();
+      update();
       return;
     }
 
-    animatedElements.forEach((element) => {
-      element.classList.add("is-changing");
-    });
+    isAnimating = true;
 
-    setTimeout(() => {
-      callback();
+    elements.forEach((el) => el.classList.add("is-changing"));
 
-      animatedElements.forEach((element) => {
-        element.classList.remove("is-changing");
+    const handleTransitionEnd = () => {
+      update();
+
+      requestAnimationFrame(() => {
+        elements.forEach((element) => element.classList.remove("is-changing"));
+
+        isAnimating = false;
       });
-    }, ANIMATION_DURATION); // Adjust the duration as needed
+    };
+
+    imageElement.addEventListener("transitionend", handleTransitionEnd, {
+      once: true,
+    });
   }
 
   function showSlide(index) {
