@@ -1,8 +1,11 @@
+const BASE = import.meta.env.BASE_URL;
+
+
 export const SLIDES = [
     {
         image: {
-            mobile: "/assets/images/mobile-image-hero-1.jpg",
-            desktop: "/assets/images/desktop-image-hero-1.jpg",
+            mobile: `${BASE}assets/images/mobile/mobile-image-hero-1.jpg`,
+            desktop: `${BASE}assets/images/desktop/desktop-image-hero-1.jpg`,
             alt: "Modern living room with white furniture"
         },
         title: "Discover innovative ways to decorate",
@@ -10,8 +13,8 @@ export const SLIDES = [
     },
     {
         image: {
-            mobile: "/assets/images/mobile-image-hero-2.jpg",
-            desktop: "/assets/images/desktop-image-hero-2.jpg",
+            mobile: `${BASE}assets/images/mobile/mobile-image-hero-2.jpg`,
+            desktop: `${BASE}assets/images/desktop/desktop-image-hero-2.jpg`,
             alt: "Three modern chairs in a minimalist room"
         },
         title: "We are available all across the globe",
@@ -19,8 +22,8 @@ export const SLIDES = [
     },
     {
         image: {
-            mobile: "/assets/images/mobile-image-hero-3.jpg",
-            desktop: "/assets/images/desktop-image-hero-3.jpg",
+            mobile: `${BASE}assets/images/mobile/mobile-image-hero-3.jpg`,
+            desktop: `${BASE}assets/images/desktop/desktop-image-hero-3.jpg`,
             alt: "Modern black chair in a minimalist room"
         },
         title: "Manufactured with the best materials",

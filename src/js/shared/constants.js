@@ -9,4 +9,13 @@ export const REQUIRED_ELEMENTS = [
     "mobileNav",
     "mobileNavContent",
     "mobileNavLinks",
+
+    // Slider
+    "sliderSource",
+    "sliderImage",
+    "sliderTitle",
+    "sliderDescription",
+
+    "previousSlideButton",
+    "nextSlideButton",
 ];

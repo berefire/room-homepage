@@ -15,6 +15,12 @@
     position: relative;
   }
 
+  &__image, &__main-title, &__description {
+    transition:
+      opacity .3s ease,
+      transform .3s ease;
+  }
+
   &__controls {
     position: absolute;
 
@@ -198,4 +204,9 @@
       justify-self: start;
     }
   }
+}
+
+.is-changing {
+  opacity: 0;
+  transform: scale(.985);
 }
