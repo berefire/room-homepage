@@ -1,123 +1,221 @@
 # Frontend Mentor - Room homepage solution
 
-This is a solution to the [Room homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+![GitHub last commit](https://img.shields.io/github/last-commit/berefire/room-homepage)
+![Repo size](https://img.shields.io/github/repo-size/berefire/room-homepage)
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Semantic HTML](https://img.shields.io/badge/Semantic%20HTML-ff9800?style=for-the-badge)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+[![Frontend Mentor](https://img.shields.io/badge/Frontend%20Mentor-3e54a3?style=for-the-badge&logo=frontendmentor&logoColor=white)](https://www.frontendmentor.io/)
+![Architecture - BEM](https://img.shields.io/badge/Architecture-BEM-000000?style=for-the-badge)
+![CUBE CSS](https://img.shields.io/badge/CUBE%20CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Build Tool - Vite](https://img.shields.io/badge/Build%20Tool-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Accessibility](https://img.shields.io/badge/Accessibility-A11Y-0052cc?style=for-the-badge)
+![Responsive Layout](https://img.shields.io/badge/Responsive%20Layout-Full%20Support-blue?style=for-the-badge)
+![Mobile First](https://img.shields.io/badge/Mobile--First-Design-orange?style=for-the-badge)
+[![Google Lighthouse](https://img.shields.io/badge/Lighthouse-Audit-00B0FF?style=for-the-badge&logo=lighthouse&logoColor=white)](./assets/downloads/lighthouse-performance-report.pdf)
+
+This is a solution to the [Room homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [The Challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+- [My Process](#️my-process)
+  - [Built With](#built-with)
+  - [Architecture](#architecture)
+  - [Accessibility Features](#accessibility-features)
+  - [What I Learned](#what-i-learned)
+  - [Continued Development](#continued-development)
+  - [Useful Resources](#useful-resources)
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+---
 
-## Overview
+## 📖Overview
 
 ### The challenge
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Navigate the slider using either their mouse/trackpad or keyboard
+- View the optimal layout depending on their device's screen size.
+- See hover and focus states for all interactive elements.
+- Navigate the hero slider using mouse, touch, or keyboard.
+- Open and close the mobile navigation using an accessible dialog.
+- Experience subtle animations that respect the user's reduced motion preference.
 
-### Screenshot
+### 📸Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
-### Links
+### 🔗Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://berefire.github.io/room-homepage/](https://berefire.github.io/room-homepage/)
 
-## My process
+---
 
-### Built with
+## ⚙️My process
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+### 🛠Built with
+
+- Semantic HTML5
+- Sass (SCSS)
+- CSS Custom Properties
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- CSS Grid
+- Flexbox
+- JavaScript (ES Modules)
+- Vite
+- CUBE CSS principles
+- BEM naming convention
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+---
 
-### What I learned
+### 🔎Architecture
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+The project follows a modular architecture that separates responsibilities across styles and JavaScript.
 
-To see how you can add code snippets, see below:
+#### Sass
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+```text
+styles/
+├── abstracts/
+├── base/
+├── components/
+├── layout/
+├── tokens/
+├── utilities/
+└── main.scss
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+
+#### JavaScript
+
+```text
+js/
+├── data/
+├── features/
+│   ├── slider/
+│   └── mobile-menu/
+└── shared/
+```
+
+Each feature is organized using:
+
+- `controller.js`
+- `events.js`
+- `index.js`
+
+This structure keeps DOM manipulation, business logic, and event handling clearly separated.
+
+---
+
+### ♿Accessibility Features
+
+Accessibility was considered throughout the project.
+
+Implemented features include:
+
+- Semantic HTML structure
+- Keyboard accessible slider controls
+- Keyboard accessible mobile navigation
+- Proper use of ARIA attributes
+- Visible keyboard focus indicators using `:focus-visible`
+- Responsive typography
+- Respect for `prefers-reduced-motion`
+- Accessible dialog implementation
+- Decorative SVGs hidden from assistive technologies
+- Live region updates for changing hero content
+
+---
+
+### 💡What I learned
+
+This project helped reinforce several frontend concepts.
+
+Some highlights include:
+
+- Designing a scalable Sass architecture using design tokens and semantic tokens.
+- Combining CUBE CSS principles with BEM naming.
+- Building reusable Sass mixins for typography, media queries, focus styles, and CSS variable generation.
+- Creating modular JavaScript using the controller/event pattern.
+- Managing responsive images using the `<picture>` element.
+- Implementing accessible animations while respecting user motion preferences.
+- Structuring DOM utilities to improve maintainability.
+
+Example of the typography mixin:
+
+```scss
+@mixin text-style($style) {
+    font-family: map.get($style, family);
+    font-size: map.get($style, size);
+    font-weight: map.get($style, weight);
+    line-height: map.get($style, line-height);
+    letter-spacing: map.get($style, letter-spacing);
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+Example of the slider controller pattern:
+
+```javascript
+function showNextSlide() {
+    currentIndex = (currentIndex + 1) % SLIDES.length;
+    animate(render);
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+---
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+### 🚀Continued development
 
-### Continued development
+Areas I'd like to continue improving include:
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- Advanced animation techniques with the Web Animations API.
+- More reusable JavaScript architecture for UI components.
+- Automated testing with Vitest.
+- End-to-end testing with Playwright.
+- Performance optimization and lazy loading strategies.
+- Building additional accessible interactive components.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+---
 
-### Useful resources
+### 📚Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- Frontend Mentor — <https://www.frontendmentor.io/>
+- MDN Web Docs — <https://developer.mozilla.org/>
+- Every Layout — <https://every-layout.dev/>
+- CUBE CSS — <https://cube.fyi/>
+- WAI-ARIA Authoring Practices — <https://www.w3.org/WAI/ARIA/apg/>
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+### 🤖AI Collaboration
 
-### AI Collaboration
+AI was used as a collaborative development assistant throughout this project.
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+It helped with:
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+- Reviewing HTML semantics and accessibility.
+- Refining the Sass architecture.
+- Improving JavaScript module organization.
+- Debugging layout and responsive issues.
+- Reviewing commit messages.
+- Discussing accessibility best practices.
+- Brainstorming responsive layouts and animation techniques.
 
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+All code was reviewed, adapted, and integrated manually to fit the project's architecture and coding standards.
 
-## Author
+---
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+## 👤Author
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@berefire](https://www.frontendmentor.io/profile/berefire)
+- GitHub - [@berefire](https://github.com/berefire)
 
-## Acknowledgments
+## 🙏Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Thanks to Frontend Mentor for providing practical challenges that help developers improve real-world frontend skills.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+---
