@@ -31,6 +31,10 @@
     background-color: var(--color-bg-button-hero-control);
     color: var(--white);
 
+    &:hover {
+      background-color: var(--color-bg-button-hero-control-hover);
+    }
+
     &:focus-visible {
       outline: none;
       box-shadow: inset 0 0 0 functions.rem(2) var(--white);
