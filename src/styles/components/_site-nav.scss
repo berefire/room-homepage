@@ -49,6 +49,10 @@
 
         transform: translateX(-50%);
         transition: inline-size 200ms ease;
+
+        @include mixins.reduced-motion {
+          transition: none;
+        }
       }
 
       &:hover::after,

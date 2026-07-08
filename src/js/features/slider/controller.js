@@ -1,4 +1,5 @@
 import { SLIDES } from "@js/data";
+import { ANIMATION_DURATION, prefersReducedMotion } from "@js/shared";
 
 export function createSliderController({
   sourceElement,
@@ -20,18 +21,23 @@ export function createSliderController({
     descriptionElement.textContent = slide.description;
   }
 
-  function animateSlide(callback){
-    animatedElements.forEach((element)=> {
+  function animateSlide(callback) {
+    if (prefersReducedMotion()) {
+      callback();
+      return;
+    }
+
+    animatedElements.forEach((element) => {
       element.classList.add("is-changing");
-    })
+    });
 
     setTimeout(() => {
       callback();
 
-      animatedElements.forEach((element)=> {
+      animatedElements.forEach((element) => {
         element.classList.remove("is-changing");
-    });
-    }, 300); // Adjust the duration as needed
+      });
+    }, ANIMATION_DURATION); // Adjust the duration as needed
   }
 
   function showSlide(index) {
