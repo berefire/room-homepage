@@ -1,0 +1,17 @@
+.skip-link {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+
+  padding: 1rem;
+  background: var(--white);
+  color: var(--black);
+
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  z-index: 1000;
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
